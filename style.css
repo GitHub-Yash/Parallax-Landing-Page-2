@@ -1,0 +1,203 @@
+/* Setting defaults */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-moz-selection {
+    background-color: #155e4f;
+}
+
+::selection {
+    background-color: #155e4f;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation bar  */
+section {
+    background: url("images/summer-landscape.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    color: #c9f2e1;
+    font-size: 30px;
+
+}
+
+nav a {
+    margin-right: 30px;
+    color: #c9f2e1;
+    border-radius: 20px;
+    padding: 2px 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.3s background;
+}
+
+nav a:hover {
+    background-color: #0c1f20;
+}
+
+/* Showcase area  */
+.showcase {
+    max-width: 650px;
+    max-width: 650px;
+    margin: 60px 100px;
+}
+
+.showcase-info h2 {
+    font-size: 55px;
+    color: #46b377;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.showcase-info h2 span {
+    color: #fff;
+}
+
+.showcase-info p {
+    color: #c9f2e1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.btn-moreInfo {
+    background-color: #155e4f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #c9f2e1;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    transition: 0.3s background;
+}
+
+.btn-moreInfo:hover {
+    background-color: #0c1f20;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 30px;
+}
+
+.media-icons a {
+    color: #46b377;
+    margin: 30px;
+    transition: 0.3s transform;
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+}
+
+/* Responsive Designing incoming */
+
+label {
+    display: none;
+}
+
+#check {
+    z-index: 3;
+}
+
+@media(max-width: 960px) {
+
+    header nav {
+        display: none;
+    }
+
+    label {
+        display: block;
+        font-size: 25px;
+        transition: 0.3s color;
+        cursor: pointer;
+    }
+
+    lable:hover {
+        color: #fff;
+    }
+
+    label .close-btn {
+        display: none;
+    }
+
+    #check:checked~header nav {
+        z-index: 2;
+        display: flex;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        bottom: 0%;
+        right: 0%;
+        justify-content: center;
+        align-items: center;
+        background: rgba(70, 179, 119, 0.9);
+    }
+
+    #check:checked~header nav ul {
+        flex-direction: column;
+    }
+
+    #check:checked~header nav ul li {
+        margin-bottom: 50px;
+    }
+
+    #check:checked~header nav ul a {
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    #check:checked~header label .menu-btn {
+        display: none;
+    }
+
+    #check:checked~header label .close-btn {
+        z-index: 2;
+        display: block;
+        position: fixed;
+
+    }
+
+    label .menu-btn {
+        position: absolute;
+    }
+}
+
+input {
+    display: none;
+}
